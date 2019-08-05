@@ -30,7 +30,7 @@ app.use(session({
 
 app.get(["/", "/homepage.hbs", "/home"], (req, res)=>{
     if(!req.session.username){                                      // default would be the login page (no account yet)
-        res.sendFile(__dirname + "/public/login.html")
+        res.sendFile(__dirname + "/public/index.html")
     }
     else{                                                           // remember the user who logged in
         res.render("homepage.hbs", {
